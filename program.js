@@ -34,7 +34,11 @@ function runDetection() {
       if (predictions[current]?.class == 4) {
         // 現在のy座標と前回のy座標の差分
         let dy = predictions[current].bbox[1] - py;
-        window.scrollBy(0, -dy * factor);
+        window.scrollBy({
+          left: 0,
+          top: - dy * factor,
+          behavior: 'instant'
+        });
         py = predictions[current].bbox[1];
       } else {
         current = -1;
