@@ -56,6 +56,11 @@ function runDetection() {
 document.querySelector('#startButton').addEventListener('click', () => {
   // フラグをtrueに
   startFlag = true;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.font = "20px sans-serif";
+  ctx.textAlign = "center";
+  ctx.baseLine = "middle";
+  ctx.fillText("Loading...", canvas.width/2, canvas.height/2, canvas.width);
   // ハンドトラッキングのモデルを読み込む
   handTrack.load({
     flipHorizontal: true,
@@ -82,6 +87,8 @@ document.querySelector('#stopButton').addEventListener('click', () => {
   handTrack.stopVideo(video);
   // フラグをfalseに
   startFlag = false;
+  // キャンバスをクリア
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
 
