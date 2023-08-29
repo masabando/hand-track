@@ -5,6 +5,7 @@ const video = document.querySelector('#video');
 const ctx = canvas.getContext('2d');
 let model;
 let startFlag = false;
+let factor = 1;
 
 // predictions[i].class
 // 1: "open"
@@ -33,7 +34,7 @@ function runDetection() {
       if (predictions[current]?.class == 4) {
         // 現在のy座標と前回のy座標の差分
         let dy = predictions[current].bbox[1] - py;
-        window.scrollBy(0, -dy);
+        window.scrollBy(0, -dy * factor);
         py = predictions[current].bbox[1];
       } else {
         current = -1;
@@ -79,6 +80,10 @@ document.querySelector('#stopButton').addEventListener('click', () => {
   startFlag = false;
 });
 
+
+document.querySelector("#factor").addEventListener('change', (e) => {
+  factor = +e.target.value;
+});
 
 function makeDummy() {
   let page = document.querySelector('#page');
