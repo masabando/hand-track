@@ -12,14 +12,31 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-expand navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Hand Gesture</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <button class="nav-link" id="startButton">start</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="stopButton">stop</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <canvas id="canvas"></canvas>
   <video id="video" autoplay muted playsinline></video>
 
-  <div>
-    <button id="startButton" class="btn btn-primary">start</button>
-    <button id="stopButton" class="btn btn-secondary">stop</button>
+  <div class="container" id="page">
+    <h1>ハンドジェスチャで動かすページのサンプル</h1>
+
   </div>
+
+
 
   <script src="program.js"></script>
 </body>

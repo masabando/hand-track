@@ -1,0 +1,18 @@
+#video {
+  display: none;
+}
+
+#canvas {
+  width: 200px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+
+#page {
+  margin-top: 14rem;
+}
+
+h2 {
+  margin-top: 3rem;
+}
