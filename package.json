@@ -2,5 +2,24 @@
   "dependencies": {
     "bootstrap": "^5.3.1",
     "handtrackjs": "^0.1.5"
-  }
+  },
+  "name": "hand-track",
+  "description": "",
+  "version": "1.0.0",
+  "main": "program.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masabando/hand-track.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masabando/hand-track/issues"
+  },
+  "homepage": "https://github.com/masabando/hand-track#readme"
 }
